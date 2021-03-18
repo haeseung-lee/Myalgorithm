@@ -1,5 +1,7 @@
 package maximumUnitOnTruck;
 
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class MySolution {
 
@@ -21,29 +23,46 @@ public class MySolution {
 	
 	public int maximumUnits(int[][] boxTypes, int truckSize) {
 		
-		int[][] types = boxTypes;
-		int size = truckSize;
+//		int[][] types = boxTypes;
+//		int size = truckSize;
 		int sum = 0;
 		
-		for(int i=1; i<types.length; i++) {
-			for(int j=0; j < i ;j++) {
-				if(types[i][1] > types[j][1]) {
-					int[] temp = types[i];
-					types[i] = types[j];
-					types[j] = temp;
-				}
-			}
-		}
 		
-		for(int i=0; i<types.length; i++) {
-			
-			if(types[i][0] < size) {
-				sum += types[i][0] * types[i][1];
-				size -= types[i][0];
+		//types[i][1] 내림차순 정렬
+		Arrays.sort(boxTypes, new Comparator<int[]>() {
+
+			@Override
+			public int compare(int[] o1, int[] o2) {
+				
+				return o2[1]-o1[1];
+			}
+		});
+		
+//		for(int i=1; i<types.length; i++) {
+//			for(int j=0; j < i ;j++) {
+//				if(types[i][1] > types[j][1]) {
+//					int[] temp = types[i];
+//					types[i] = types[j];
+//					types[j] = temp;
+//				}
+//			}
+//		}
+
+		//합구하기
+		for(int i=0; i<boxTypes.length; i++) {
+			if(boxTypes[i][0] < truckSize) {
+				sum += boxTypes[i][0] * boxTypes[i][1];
+				truckSize -= boxTypes[i][0];
 			} else {
-				sum += size * types[i][1];
+				sum += truckSize * boxTypes[i][1];
 				break;
 			}
+//			int numOfBox = boxTypes[i][0];
+//			int numOfUnit = boxTypes[i][1];
+//			sum += (truckSize >= numOfBox ? (numOfBox * numOfUnit) : (numOfUnit * truckSize));
+//		truckSize = (truckSize <= numOfBox ? 0 : truckSize - numOfBox );
+//		if(truckSize == 0)
+//			break;
 		}
 		return sum;
     }
