@@ -68,7 +68,6 @@ public class SumofTwoLists {
 		
 	}
 	
-	
 	public static void main(String[] args) {
 		String[] listA = {"Shogun","Tapioca Express","Burger King","KFC"};
 		String[] listB = {"KFC","Shogun","Burger King"};
