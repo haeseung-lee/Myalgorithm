@@ -27,16 +27,17 @@ public class MySolution {
 //		int size = truckSize;
 		int sum = 0;
 		
-		
-		//types[i][1] 내림차순 정렬
-		Arrays.sort(boxTypes, new Comparator<int[]>() {
 
-			@Override
-			public int compare(int[] o1, int[] o2) {
-				
-				return o2[1]-o1[1];
-			}
-		});
+		Arrays.sort(boxTypes,(a,b) -> b[1]-a[1]);
+		//types[i][1] 내림차순 정렬
+//		Arrays.sort(boxTypes, new Comparator<int[]>() {
+//
+//			@Override
+//			public int compare(int[] o1, int[] o2) {
+//				
+//				return o2[1]-o1[1];
+//			}
+//		});
 		
 //		for(int i=1; i<types.length; i++) {
 //			for(int j=0; j < i ;j++) {
