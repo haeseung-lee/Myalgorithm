@@ -13,11 +13,15 @@ public class SumWhile {
 		int n = stdIn.nextInt();
 		
 		int sum = 0;
-		int i = 1;
+//		int i = 1;
 		
-		while(i <= n) {
+//		while(i <= n) {
+//			sum += i;
+//			i++;
+//		}
+		
+		for(int i = 1; i <= n; i++) {
 			sum += i;
-			i++;
 		}
 		
 		System.out.println("1부터 " + n + "까지의 합은" + sum + "입니다.");
