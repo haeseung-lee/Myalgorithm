@@ -20,7 +20,7 @@ public class min3 {
 		}
 		return min;
 	}
-	//p19. 연습
+	
 	private static int min4(int a, int b, int c, int d) {
 		
 		int min = a;
