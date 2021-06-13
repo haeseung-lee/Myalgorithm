@@ -21,6 +21,8 @@ public class Sumwhile {
 		}
 		
 		System.out.println("1부터 " + n + "까지의 합은" + sum + "입니다.");
+		//while문 종료시 i 값이 n+1이 됨을 확인
+		System.out.println("i 값 확인 : " + i);
 	}
 	
 }
