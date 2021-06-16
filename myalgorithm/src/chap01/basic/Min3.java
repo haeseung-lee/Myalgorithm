@@ -1,6 +1,6 @@
 package chap01.basic;
 
-public class min3 {
+public class Min3 {
 
 	public static void main(String[] args) {
 		
