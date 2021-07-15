@@ -1,4 +1,4 @@
-package a;
+package a_pageCheck;
 
 public class PageCheck {
 	//p37 차례.
