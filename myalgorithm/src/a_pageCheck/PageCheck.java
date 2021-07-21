@@ -1,7 +1,7 @@
 package a_pageCheck;
 
 public class PageCheck {
-	//p41 차례.(직각 이등변 삼각형 출력 완료, Q16.완료)
+	//p52 배열의 최대값 구하기
 	public static void main(String[] args) {
 //		System.out.println("hello world");
 	}
