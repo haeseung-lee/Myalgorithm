@@ -1,7 +1,7 @@
 package a_pageCheck;
 
 public class PageCheck {
-	//p52 배열의 최대값 구하기
+	//p58 배열요소를 역순으로 정렬하기
 	public static void main(String[] args) {
 //		System.out.println("hello world");
 	}
