@@ -32,4 +32,5 @@ public class ArrayCopy {
 			System.out.print(a[i] + " ");
 		}
 	}
+	
 }
